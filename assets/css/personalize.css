@@ -1,0 +1,9 @@
+.container-fluid {
+    background-image: url(../img/bg-car.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.costum-bg{
+    background-color: rgba(0, 0, 0, 0.621);
+}
