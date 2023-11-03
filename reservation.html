@@ -198,7 +198,14 @@
             </div>
           </div>
           
-         
+          <div class = "display-style-btns">
+            <button type = "button" id = "grid-active-btn">
+                <i class = "fas fa-th"></i>
+            </button>
+            <button type = "button" id = "details-active-btn">
+                <i class = "fas fa-list-ul"></i>
+            </button>
+        </div>
         
       </div>
       <!-- Collapsible wrapper -->
@@ -206,18 +213,24 @@
     <!-- Container wrapper -->
   </nav>
   <!-- Navbar -->
-  <div id="list">
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com/ License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"/>
-    </svg>
-  </div>
+
+  
+ 
     </section>
     <section class="sec4">
+      <div class = "main-wrapper">
+        <div class = "container">
+       
       <div class="container " id="container">
-        <div class="row  d-flex  " id="test">
+        <div class="row flex-sm-row  d-flex  " id="test">
           
-            <div class="position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img0">
-                <img src="./img/porch3.png" alt=""  class="w-100 "  >
-                <div class="description ">
+            <div class="item-list position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img0">
+              <div class="item">
+                <div class = "item-img">
+                <img src="assets/img/porch3.png" alt=""  class="w-100 "  >
+              </div>
+              <div class = "item-detail">
+                <div class="description description">
                   <h3>description</h3>
                   <p>
                     Type: zeufevbzbc<br>
@@ -227,55 +240,85 @@
                     Prix: 1000dh<br>
                   </p>
                   <button onclick="openPopup()" class="btn" style="vertical-align:middle"><span>Reservez</span></button>
-                </div>               
-            </div>
-            <div class="position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img1">
-              <img src="./img/porch3.png" alt=""  class="w-100 "  >
-              <div class="description ">
-                <h3>description</h3>
-                <p>
-                  Type: zeufevbzbc<br>
-                  Carburation: dgfko<br>
-                  Vitesse: 250km/h<br>
-                  Vitesse en 10s: 120km/h<br>
-                  Prix: 1000dh<br>
-                </p>
-                <button onclick="openPopup()" class="btn" style="vertical-align:middle"><span>Reservez</span></button>
+                </div>
+                </div>
               </div>               
-          </div>
-          <div class="position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img2">
-            <img src="./img/porch3.png" alt=""  class="w-100 "  >
-            <div class="description ">
-              <h3>description</h3>
-              <p>
-                Type: zeufevbzbc<br>
-                Carburation: dgfko<br>
-                Vitesse: 250km/h<br>
-                Vitesse en 10s: 120km/h<br>
-                Prix: 1000dh<br>
-              </p>
-              <button onclick="openPopup()" class="btn" style="vertical-align:middle"><span>Reservez</span></button>
-            </div>               
-        </div>
-        <div class="position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img3">
-          <img src="./img/porch3.png" alt=""  class="w-100 "  >
-          <div class="description ">
-            <h3>description</h3>
-            <p>
-              Type: zeufevbzbc<br>
-              Carburation: dgfko<br>
-              Vitesse: 250km/h<br>
-              Vitesse en 10s: 120km/h<br>
-              Prix: 1000dh<br>
-            </p>
-            <button onclick="openPopup()" class="btn" style="vertical-align:middle"><span>Reservez</span></button>
-          </div>               
-      </div>
+            </div>
+
+            
+            <div class="item-list position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img0">
+              <div class="item">
+                <div class = "item-img">
+                <img src="assets/img/porch3.png" alt=""  class="w-100 "  >
+              </div>
+              <div class = "item-detail">
+                <div class="description description">
+                  <h3>description</h3>
+                  <p>
+                    Type: zeufevbzbc<br>
+                    Carburation: dgfko<br>
+                    Vitesse: 250km/h<br>
+                    Vitesse en 10s: 120km/h<br>
+                    Prix: 1000dh<br>
+                  </p>
+                  <button onclick="openPopup()" class="btn" style="vertical-align:middle"><span>Reservez</span></button>
+                </div>
+                </div>
+              </div>               
+            </div>
+
+
+       <div class="item-list position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img0">
+              <div class="item">
+                <div class = "item-img">
+                <img src="assets/img/porch3.png" alt=""  class="w-100 "  >
+              </div>
+              <div class = "item-detail">
+                <div class="description description">
+                  <h3>description</h3>
+                  <p>
+                    Type: zeufevbzbc<br>
+                    Carburation: dgfko<br>
+                    Vitesse: 250km/h<br>
+                    Vitesse en 10s: 120km/h<br>
+                    Prix: 1000dh<br>
+                  </p>
+                  <button onclick="openPopup()" class="btn" style="vertical-align:middle"><span>Reservez</span></button>
+                </div>
+                </div>
+              </div>               
+            </div>
+
+            
+            <div class="item-list position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img0">
+              <div class="item">
+                <div class = "item-img">
+                <img src="assets/img/porch3.png" alt=""  class="w-100 "  >
+              </div>
+              <div class = "item-detail">
+                <div class="description description">
+                  <h3>description</h3>
+                  <p>
+                    Type: zeufevbzbc<br>
+                    Carburation: dgfko<br>
+                    Vitesse: 250km/h<br>
+                    Vitesse en 10s: 120km/h<br>
+                    Prix: 1000dh<br>
+                  </p>
+                  <button  class="btn" style="vertical-align:middle"><span>Reservez</span></button>
+                </div>
+                </div>
+              </div>               
+            </div>
         </div>
         <div class="row  d-flex  " id="tes">
-          <div class="position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img4">
-              <img src="./img/porch3.png" alt=""  class="w-100 "  >
-              <div class="description ">
+          <div class="item-list position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img0">
+            <div class="item">
+              <div class = "item-img">
+              <img src="assets/img/porch3.png" alt=""  class="w-100 "  >
+            </div>
+            <div class = "item-detail">
+              <div class="description description">
                 <h3>description</h3>
                 <p>
                   Type: zeufevbzbc<br>
@@ -285,10 +328,12 @@
                   Prix: 1000dh<br>
                 </p>
                 <button onclick="openPopup()" class="btn" style="vertical-align:middle"><span>Reservez</span></button>
-              </div>               
+              </div>
+              </div>
+            </div>               
           </div>
           <div class="position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img5">
-            <img src="./img/porch3.png" alt=""  class="w-100 "  >
+            <img src="assets/img/porch3.png" alt=""  class="w-100 "  >
             <div class="description ">
               <h3>description</h3>
               <p>
@@ -302,7 +347,7 @@
             </div>               
         </div>
         <div class="position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img6">
-          <img src="./img/porch3.png" alt=""  class="w-100 "  >
+          <img src="assets/img/porch3.png" alt=""  class="w-100 "  >
           <div class="description ">
             <h3>description</h3>
             <p>
@@ -316,7 +361,7 @@
           </div>               
       </div>
       <div class="position-relative img col-xl-3 col-lg-6  col-md-6 col-sm-10 " id="img7">
-        <img src="./img/porch3.png" alt=""  class="w-100 "  >
+        <img src="assets/img/porch3.png" alt=""  class="w-100 "  >
         <div class="description ">
           <h3>description</h3>
           <p>
@@ -346,7 +391,7 @@
         <h1 class="text-center ">Location d'une Porsche lors de votre mariage</h1>
         <div class="row  d-flex  ">
             <div class="col-xl-6 col-lg-6  col-md-9 col-sm-10 ">
-                <img src="./img/lok.png" alt=""  class="w-100">
+                <img src="assets/img/lok.png" alt=""  class="w-100">
             </div>
 
             <div class="text_btn col-xl-5 col-lg-5  col-sm-10 pt-5 d-flex flex-column text-center">
@@ -356,6 +401,8 @@
                 <button onclick="openPopup()" class="button" style="vertical-align:middle"><span>Reservez</span></button>
             </div>
         </div>
+      </div>
+    </div>  
     </section>
 
     <script  src="assets/js/reservation.js"></script>
