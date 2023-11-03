@@ -18,5 +18,86 @@
     z-index: -1;
 }
 .home-btn{
-    width: 25%;
+
+
+    font-size: 1.2em;
+    border: 1px white solid;
 }
+.home-btn:hover{
+    background-color: #cccccc1f;
+    border: 1px white solid;
+}
+.card img{
+    height: 60%;
+   
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+}
+.carousel img {
+    width: 100%;
+    
+    height: auto;
+}
+
+#img-box img {
+  transition: transform 1s; 
+  cursor: pointer;
+}
+
+#img-box img:hover {
+  transform: scale(1.1);
+}
+
+
+.card {
+    
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease; 
+  }
+  
+  .card:hover {
+    box-shadow: 0px 9px 29px 0px #868383;
+    transform: scale(1.02); 
+  }
+   
+  .sli img ,
+  .slid img ,
+  .slidd img{
+    height: 40vh;
+    width: 50vw;
+  }
+
+  .link {
+    transition: 1s;
+    color: #fff;
+}
+
+.link:hover {
+    color: rgb(132, 130, 130);
+}
+
+.nav {
+    gap: 20PX;
+    display: flex;
+    justify-content: center;
+}
+
+.user {
+    margin-left: 10px;
+}
+nav {
+    backdrop-filter: blur(100px);
+    background-color: rgba(0, 0, 0, 0.553);
+}
+.drapo {
+    width: 60px;
+}
+.lg{
+    width: 100px;
+}
+
