@@ -208,3 +208,51 @@ all.addEventListener("click",  ()=>{
       pagination3.style.backgroundColor = ""; 
     
   })
+
+
+
+
+
+  ////////////list///////////////
+  // Obtenez une référence vers le bouton et le conteneur
+
+const boutonCacher = document.getElementById('list');
+const container = document.getElementById('container');
+const boutonblock = document.getElementById('blok');
+const row1 = document.getElementById('test1');
+const row2 = document.getElementById('tes2');
+const des = document.querySelectorAll('.description');
+const txt = document.querySelectorAll('.description p');
+
+  ////////////block///////////////
+  boutonCacher.addEventListener('click', function() {
+    txt.forEach(function(texte){
+      texte.style.color = 'black';
+      // texte.style.width = '150px';
+    })
+    des.forEach(function(element) {
+      element.style.marginLeft= '30vw';
+      element.style.opacity= '1';
+      element.style.flexDirection = 'row';
+      element.style.backgroundColor = 'transparent';
+      
+    });
+    row1.style.flexDirection = 'column';
+    row1.style.alignItems = 'stretch';
+    row1.style.gap = '3vw';
+    row1.style.alignItems = 'stretch';
+    row2.style.alignItems = 'stretch';
+    row2.style.flexDirection = 'column';
+    row2.style.gap = '3vw';
+  });
+
+  boutonblock.addEventListener('click', function() {
+    row1.style = 'initial';
+    row2.style = 'initial';
+    des.forEach(function(element) {
+      element.style = 'initial';
+    });
+    txt.forEach(function(element) {
+      element.style = 'initial';
+    });
+  });

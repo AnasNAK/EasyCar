@@ -1,5 +1,10 @@
- 
-
+#blok img{
+  width: 7vw;
+}
+#blok{
+  cursor: pointer;
+}
+/* ///////////////////////// */
 .container {
     padding-top: 8vw;
 }
@@ -106,7 +111,9 @@ svg{
     height: 2.5VW;
     cursor: pointer;
 }
-
+.sec3 .nav-link{
+  cursor: pointer;
+}
 /* section4 */
 
 .sec4 .container{
@@ -235,11 +242,9 @@ svg{
     background-color: red;
 }   
 
-  
+footer{
 
-
-
-
+}
 
 
 
