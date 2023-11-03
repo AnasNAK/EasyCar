@@ -17,7 +17,6 @@
     z-index: -1;
 }
 .home-btn{
-    width: 23vw;
     font-size: 1.2em;
     border: 1px white solid;
 }
@@ -36,7 +35,7 @@
 }
 .carousel img {
     width: 100%;
-    max-width: 100%;
+    
     height: auto;
 }
 
@@ -96,5 +95,5 @@ nav {
     width: 60px;
 }
 .lg{
-    width: 200px;
+    width: 100px;
 }
