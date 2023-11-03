@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 /* start of nav-bar */
 .link {
     transition: 1s;
@@ -43,11 +47,11 @@ nav {
 
 .accordion-body {
     background-color: rgba(178, 187, 219, 0.49);
-   
+
 }
 
 .accordion-button {
-    background-color:rgba(178, 187, 219, 0.49)!important;
+    background-color: rgba(178, 187, 219, 0.49) !important;
 }
 
 
@@ -60,6 +64,7 @@ nav {
 .section1 {
     padding-top: 10rem;
 }
+
 .card {
     transition: transform 0.2s;
 }
@@ -67,34 +72,39 @@ nav {
 .card:hover {
     transform: scale(1.1);
 }
- 
+
 .testimonial-card .card-up {
     height: 120px;
     overflow: hidden;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
-  }
-  .testimonial-card .avatar {
+}
+
+.testimonial-card .avatar {
     width: 110px;
     margin-top: -60px;
     overflow: hidden;
     border: 3px solid #fff;
     border-radius: 50%;
-  }
+}
+
 /* end of last section */
 @media only screen and (max-width: 985px) {
-    .row{
+    .row {
         row-gap: 4vh;
     }
+
+}
+
+@media only screen and (max-width: 766px) {
+
+    .row {
+        display: flex;
+        justify-content: center;
+    }
     
+.row>* {
+    width: auto !important;
 }
-@media only screen and (max-width: 766px){
-   
-        .row{
-          display: flex;
-          justify-content: center;
-        }
-      }
-      
-   
 }
+
