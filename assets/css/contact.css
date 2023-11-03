@@ -1,4 +1,4 @@
-body{
+ body{
     background-color: ;
 }
 .header{
@@ -146,9 +146,9 @@ h2{
     margin: 10px;
 }
 .cart{
-    background-color: #000000;
+    background-color: #7f7f7f;
     width: fit-content;
     margin: 30px;
     border-radius: 40px;
     border: 1px solid black;
-}
+} 
