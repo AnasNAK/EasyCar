@@ -256,6 +256,7 @@ footer{
 
 
 /* media */
+
 @media screen and (min-width: 992px) {
     .row{
         display: flex;
@@ -263,6 +264,18 @@ footer{
         align-items: center;
     }
 }
+@media screen and (max-width: 1300px) {
+  .sec4 .btn{
+      width: 110px;
+  }
+  .sec4 .description p{
+    width: 140px;
+  }
+  .sec4 .description h3{
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 991px){
     .row{
         display: flex;
@@ -274,7 +287,10 @@ footer{
      p.txt{
         font-size: 12px;
     } 
-    .button {
+    .button{
         width: 140px;
+      }
+      .sec4 .row{
+        gap: 30PX;
       }
 }

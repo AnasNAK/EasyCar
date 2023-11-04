@@ -13,9 +13,9 @@ const gam = document.querySelector("#gammes")
 const base = document.querySelector("#bases")
 const all = document.querySelector("#all")
 const img = document.querySelectorAll(".img")
+const spans = document.querySelectorAll('.description p span');
 
-
- const tab  =[{image:"assets/img/mercedes1.png",Type: "gammes",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."}
+ const tabTrie  =[{image:"assets/img/mercedes1.png",Type: "gammes",Carburation: "......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."}
     ,{image:"assets/img/brabus1.png",Type: "services",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
     {image:"assets/img/mercedes1.png",Type: "gammes",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
     {image:"assets/img/6.png",Type: "bases",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
@@ -46,32 +46,32 @@ const img = document.querySelectorAll(".img")
 
 
 
-    const table  =[{image:"assets/img/mercedes1.png",Type: "gammes",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."}
-    ,{image:"assets/img/brabus1.png",Type: "services",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/mercedes1.png",Type: "gammes",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/6.png",Type: "bases",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/brabus1.png",Type: "services",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/mercedes1.png",Type: "gammes",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/6.png",Type: "bases",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/mercedes1.png",Type: "gammes",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
+    const table  =[{image:"assets/img/mercedes1.png",Type: "______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"}
+    ,{image:"assets/img/brabus1.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/mercedes1.png",Type: "______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/6.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/brabus1.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/mercedes1.png",Type: "______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/6.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/mercedes1.png",Type: "______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
 
-    {image:"assets/img/6.png",Type: "bases",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."}
-    ,{image:"assets/img/6.png",Type: "bases",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/mercedes1.png",Type: "gammes",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/mercedes1.png",Type: "gammes",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/brabus1.png",Type: "services",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/6.png",Type: "bases",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/mercedes1.png",Type: "gammes",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/brabus1.png",Type: "services",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
+    {image:"assets/img/6.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"}
+    ,{image:"assets/img/6.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/mercedes1.png",Type: "______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/mercedes1.png",Type: "______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/brabus1.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/6.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/mercedes1.png",Type: "______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/brabus1.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
 
-    {image:"assets/img/6.png",Type: "bases",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."}
-    ,{image:"assets/img/6.png",Type: "bases",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/brabus1.png",Type: "services",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/mercedes1.png",Type: "gammes",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/brabus1.png",Type: "services",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/mercedes1.png",Type: "gammes.",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/brabus1.png",Type: "services",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."},
-    {image:"assets/img/6.png",Type: "bases",Carburation: ".......", Vitesse: "...........",Vitesse_en_10s: "...........",Prix: "..."}]
+    {image:"assets/img/6.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"}
+    ,{image:"assets/img/6.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/brabus1.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/mercedes1.png",Type: "______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/brabus1.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/mercedes1.png",Type: "______.",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/brabus1.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"},
+    {image:"assets/img/6.png",Type: "_______",Carburation: "_______", Vitesse: "_______",Vitesse_en_10s: "_______",Prix: "_____"}]
 
 
 
@@ -84,6 +84,26 @@ pagination1.addEventListener('click',()=>{
     for(i=0;i<8;i++){
         const id = document.querySelector(`#img${i%8}`)
         id.setAttribute("src",table[i].image)
+        spans.forEach(function(span) {
+              
+          // Vérifiez le texte dans chaque balise <span>
+          if (span.textContent === "Type:") {
+            span.nextSibling.textContent = table[i].Type; 
+          }  if (span.textContent === "Carburation:") {
+            span.nextSibling.textContent = table[i].Carburation;
+          }
+           if (span.textContent === "Vitesse_en_10s:") {
+            span.nextSibling.textContent = table[i].Vitesse_en_10s; 
+          }
+          
+          if (span.textContent === "Vitesse:") {
+            span.nextSibling.textContent = table[i].Vitesse; 
+          }
+          if (span.textContent === "Prix:") {
+            span.nextSibling.textContent = table[i].Prix; 
+          }
+           
+        });
         }
   pagination1.style.backgroundColor = "red"; 
   pagination2.style.backgroundColor = ""; 
@@ -97,6 +117,26 @@ pagination2.addEventListener('click',()=>{
     for(i=8;i<17;i++){
         const id = document.querySelector(`#img${i%8}`)
         id.setAttribute("src",table[i].image)
+        spans.forEach(function(span) {
+              
+          // Vérifiez le texte dans chaque balise <span>
+          if (span.textContent === "Type:") {
+            span.nextSibling.textContent = table[i].Type; 
+          }  if (span.textContent === "Carburation:") {
+            span.nextSibling.textContent = table[i].Carburation;
+          }
+           if (span.textContent === "Vitesse_en_10s:") {
+            span.nextSibling.textContent = table[i].Vitesse_en_10s; 
+          }
+          
+          if (span.textContent === "Vitesse:") {
+            span.nextSibling.textContent = table[i].Vitesse; 
+          }
+          if (span.textContent === "Prix:") {
+            span.nextSibling.textContent = table[i].Prix; 
+          }
+           
+        });
         }
   pagination1.style.backgroundColor = ""; 
   pagination2.style.backgroundColor = "red"; 
@@ -110,6 +150,26 @@ pagination2.addEventListener('click',()=>{
     for(i=17;i<25;i++){
         const id = document.querySelector(`#img${i%8}`)
         id.setAttribute("src",table[i].image)
+        spans.forEach(function(span) {
+              
+          // Vérifiez le texte dans chaque balise <span>
+          if (span.textContent === "Type:") {
+            span.nextSibling.textContent = table[i].Type; 
+          }  if (span.textContent === "Carburation:") {
+            span.nextSibling.textContent = table[i].Carburation;
+          }
+           if (span.textContent === "Vitesse_en_10s:") {
+            span.nextSibling.textContent = table[i].Vitesse_en_10s; 
+          }
+          
+          if (span.textContent === "Vitesse:") {
+            span.nextSibling.textContent = table[i].Vitesse; 
+          }
+          if (span.textContent === "Prix:") {
+            span.nextSibling.textContent = table[i].Prix; 
+          }
+           
+        });
         }
   pagination1.style.backgroundColor = ""; 
   pagination2.style.backgroundColor = ""; 
@@ -132,10 +192,30 @@ function comparaisonS(a, b) {
 
 
   serv.addEventListener("click",  ()=>{
-    tab.sort(comparaisonS)
+    tabTrie.sort(comparaisonS)
         for(i=0;i<8;i++){
             const id = document.querySelector(`#img${i%8}`)
-            id.setAttribute("src",tab[i].image)
+            id.setAttribute("src",tabTrie[i].image)
+            spans.forEach(function(span) {
+              
+              // Vérifiez le texte dans chaque balise <span>
+              if (span.textContent === "Type:") {
+                span.nextSibling.textContent = tabTrie[i].Type; 
+              }  if (span.textContent === "Carburation:") {
+                span.nextSibling.textContent = tabTrie[i].Carburation;
+              }
+               if (span.textContent === "Vitesse_en_10s:") {
+                span.nextSibling.textContent = tabTrie[i].Vitesse_en_10s; 
+              }
+              
+              if (span.textContent === "Vitesse:") {
+                span.nextSibling.textContent = tabTrie[i].Vitesse; 
+              }
+              if (span.textContent === "Prix:") {
+                span.nextSibling.textContent = tabTrie[i].Prix; 
+              }
+               
+            });
             }
       pagination1.style.backgroundColor = "red"; 
       pagination2.style.backgroundColor = ""; 
@@ -155,23 +235,34 @@ function comparaisonG(a, b) {
     }
     return 0;
   }
-  spans = document.querySelectorAll('.descriptipn p span');
+
   gam.addEventListener("click",  ()=>{
-    tab.sort(comparaisonG)
+    tabTrie.sort(comparaisonG)
         for(i=0;i<8;i++){
             const id = document.querySelector(`#img${i%8}`)
-            id.setAttribute("src",tab[i].image)
-            }
-            // spans.forEach(function(span) {
-            //   // Vérifiez le texte dans chaque balise <span>
-            //   if (span.textContent === "Type:") {
-            //     // Mettez à jour le contenu de la balise <span> suivante
-            //     span.nextSibling.textContent = tab[i%8].Type; // Remplacez "nouveau_nom" par la nouvelle valeur souhaitée
-            //   } else if (span.textContent === "Carburation:") {
-            //     // Mettez à jour le contenu de la balise <span> suivante
-            //     span.nextSibling.textContent = tab[i%8].Carburation; // Remplacez "nouveau_prenom" par la nouvelle valeur souhaitée
-            //   }
-            // });
+            id.setAttribute("src",tabTrie[i].image)
+            
+            spans.forEach(function(span) {
+              
+              // Vérifiez le texte dans chaque balise <span>
+              if (span.textContent === "Type:") {
+                span.nextSibling.textContent = tabTrie[i].Type; 
+              }  if (span.textContent === "Carburation:") {
+                span.nextSibling.textContent = tabTrie[i].Carburation;
+              }
+               if (span.textContent === "Vitesse_en_10s:") {
+                span.nextSibling.textContent = tabTrie[i].Vitesse_en_10s; 
+              }
+              
+              if (span.textContent === "Vitesse:") {
+                span.nextSibling.textContent = tabTrie[i].Vitesse; 
+              }
+              if (span.textContent === "Prix:") {
+                span.nextSibling.textContent = tabTrie[i].Prix; 
+              }
+               
+            });
+          }
       pagination1.style.backgroundColor = "red"; 
       pagination2.style.backgroundColor = ""; 
       pagination3.style.backgroundColor = ""; 
@@ -194,10 +285,30 @@ function comparaisonB(a, b) {
   }
 
   base.addEventListener("click",  ()=>{
-    tab.sort(comparaisonB)
+    tabTrie.sort(comparaisonB)
         for(i=0;i<8;i++){
             const id = document.querySelector(`#img${i%8}`)
-            id.setAttribute("src",tab[i].image)
+            id.setAttribute("src",tabTrie[i].image)
+            spans.forEach(function(span) {
+              
+              // Vérifiez le texte dans chaque balise <span>
+              if (span.textContent === "Type:") {
+                span.nextSibling.textContent = tabTrie[i].Type; 
+              }  if (span.textContent === "Carburation:") {
+                span.nextSibling.textContent = tabTrie[i].Carburation;
+              }
+               if (span.textContent === "Vitesse_en_10s:") {
+                span.nextSibling.textContent = tabTrie[i].Vitesse_en_10s; 
+              }
+              
+              if (span.textContent === "Vitesse:") {
+                span.nextSibling.textContent = tabTrie[i].Vitesse; 
+              }
+              if (span.textContent === "Prix:") {
+                span.nextSibling.textContent = tabTrie[i].Prix; 
+              }
+               
+            });
             }
       pagination1.style.backgroundColor = "red"; 
       pagination2.style.backgroundColor = ""; 
@@ -212,6 +323,27 @@ all.addEventListener("click",  ()=>{
         for(i=0;i<8;i++){
             const id = document.querySelector(`#img${i%8}`)
             id.setAttribute("src",table[i].image)
+            spans.forEach(function(span) {
+              
+              // Vérifiez le texte dans chaque balise <span>
+              if (span.textContent === "Type:") {
+                span.nextSibling.textContent = table[i].Type; 
+              }  if (span.textContent === "Carburation:") {
+                span.nextSibling.textContent = table[i].Carburation;
+              }
+               if (span.textContent === "Vitesse_en_10s:") {
+                span.nextSibling.textContent = table[i].Vitesse_en_10s; 
+              }
+              
+              if (span.textContent === "Vitesse:") {
+                span.nextSibling.textContent = table[i].Vitesse; 
+              }
+              if (span.textContent === "Prix:") {
+                span.nextSibling.textContent = table[i].Prix; 
+              }
+               
+            });
+          
             }
       pagination1.style.backgroundColor = "red"; 
       pagination2.style.backgroundColor = ""; 
@@ -226,7 +358,7 @@ all.addEventListener("click",  ()=>{
   ////////////list///////////////
   // Obtenez une référence vers le bouton et le conteneur
 
-const boutonCacher = document.getElementById('list');
+const list = document.getElementById('list');
 const container = document.getElementById('container');
 const boutonblock = document.getElementById('blok');
 const row1 = document.getElementById('test1');
@@ -235,8 +367,8 @@ const des = document.querySelectorAll('.description');
 const txt = document.querySelectorAll('.description p');
 const h3 = document.querySelectorAll('.description h3')
 
-  ////////////block///////////////
-  boutonCacher.addEventListener('click', function() {
+
+  list.addEventListener('click', function() {
     txt.forEach(function(texte){
       texte.style.color = 'black';
     })
@@ -264,6 +396,7 @@ const h3 = document.querySelectorAll('.description h3')
     row2.style.gap = '3vw';
   });
 
+   ////////////block///////////////
   boutonblock.addEventListener('click', function() {
     row1.style = 'initial';
     row2.style = 'initial';
@@ -277,3 +410,29 @@ const h3 = document.querySelectorAll('.description h3')
       texte.style = 'initial';
     })
   });
+
+
+
+  // masquer btn-list
+function masquerBouton() {
+  if (window.innerWidth < 1200) {
+    list.style.display = 'none'; 
+    row1.style = 'initial';
+    row2.style = 'initial';
+    des.forEach(function(element) {
+      element.style = 'initial';
+    });
+    txt.forEach(function(element) {
+      element.style = 'initial';
+    });
+    h3.forEach(function(texte){
+      texte.style = 'initial';
+    })
+  } else {
+    list.style.display = 'block'; 
+  }
+}
+masquerBouton();
+
+window.addEventListener('resize', masquerBouton); 
+
