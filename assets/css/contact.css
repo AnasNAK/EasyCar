@@ -113,8 +113,20 @@ line-height: normal;
     right: 0;
   }
 @media only screen and (max-width: 1024px) {
+    .header{
+        width: 40rem;
+        background-size: cover;
+        background-position: center;
+    }
+    .rect{
+        display: none;
+    }
+    .inputs img{
+        width: 30rem;
+    }
     .inputs{
         grid-template-columns: 1fr;
+        margin-top: 15rem;
     }
     .time{
         flex-direction: column;
