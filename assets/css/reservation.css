@@ -178,6 +178,9 @@ svg{
     width: 16vw;
     font-size: 14px;
 }
+.sec4 .description p span{
+  color: rgb(137, 59, 59)
+}
 .sec4 .btn {
     transform: translate(-50%, -50%);
     background-color: #282727;

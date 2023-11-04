@@ -155,13 +155,23 @@ function comparaisonG(a, b) {
     }
     return 0;
   }
-
+  spans = document.querySelectorAll('.descriptipn p span');
   gam.addEventListener("click",  ()=>{
     tab.sort(comparaisonG)
         for(i=0;i<8;i++){
             const id = document.querySelector(`#img${i%8}`)
             id.setAttribute("src",tab[i].image)
             }
+            // spans.forEach(function(span) {
+            //   // Vérifiez le texte dans chaque balise <span>
+            //   if (span.textContent === "Type:") {
+            //     // Mettez à jour le contenu de la balise <span> suivante
+            //     span.nextSibling.textContent = tab[i%8].Type; // Remplacez "nouveau_nom" par la nouvelle valeur souhaitée
+            //   } else if (span.textContent === "Carburation:") {
+            //     // Mettez à jour le contenu de la balise <span> suivante
+            //     span.nextSibling.textContent = tab[i%8].Carburation; // Remplacez "nouveau_prenom" par la nouvelle valeur souhaitée
+            //   }
+            // });
       pagination1.style.backgroundColor = "red"; 
       pagination2.style.backgroundColor = ""; 
       pagination3.style.backgroundColor = ""; 
@@ -223,17 +233,25 @@ const row1 = document.getElementById('test1');
 const row2 = document.getElementById('tes2');
 const des = document.querySelectorAll('.description');
 const txt = document.querySelectorAll('.description p');
+const h3 = document.querySelectorAll('.description h3')
 
   ////////////block///////////////
   boutonCacher.addEventListener('click', function() {
     txt.forEach(function(texte){
       texte.style.color = 'black';
-      // texte.style.width = '150px';
     })
+    h3.forEach(function(texte){
+      texte.style.display = 'none';
+
+    })
+    
     des.forEach(function(element) {
-      element.style.marginLeft= '30vw';
+     
+      element.style.marginLeft= '40vw';
       element.style.opacity= '1';
-      element.style.flexDirection = 'row';
+      element.style.width= '35VW';
+      element.style.border= '2px solid black';
+      // element.style.flexDirection = 'row';
       element.style.backgroundColor = 'transparent';
       
     });
@@ -255,4 +273,7 @@ const txt = document.querySelectorAll('.description p');
     txt.forEach(function(element) {
       element.style = 'initial';
     });
+    h3.forEach(function(texte){
+      texte.style = 'initial';
+    })
   });
