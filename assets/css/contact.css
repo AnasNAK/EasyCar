@@ -6,7 +6,7 @@ body{
     rgba(0, 0, 0, 0.76),
     rgba(0, 0, 0, 0.8)),
     url(../img/header.jpg);
-    height: 90vh;
+    height: 50vw;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -113,14 +113,36 @@ line-height: normal;
     right: 0;
   }
 @media only screen and (max-width: 1024px) {
+    .header{
+        width: fit-content;
+        background-size: cover;
+        background-position: center;
+        background-clip: border-box;
+    }
+    .header-text{
+        width: fit-content;
+        font-size: 12px;
+    }
+    .rect{
+        display: none;
+    }
+    .inputs img{
+        display: none;
+    }
     .inputs{
         grid-template-columns: 1fr;
+        margin-top: 20rem;
+    }
+    .inputs form{
+        width: fit-content;
     }
     .time{
         flex-direction: column;
+        gap: 40px;
         margin: 10px;
     }
-    .card-time{
+    .card-time h5{
         margin: 10px;
+        font-size: 18px;
     }
   }
