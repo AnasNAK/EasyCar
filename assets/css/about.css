@@ -1,6 +1,8 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
 }
 /* start of nav-bar */
 .link {
@@ -21,16 +23,19 @@
 .user {
     margin-left: 20PX;
 }
-
+.fa-user:before {
+    content: "\f007";
+}
 nav {
     backdrop-filter: blur(100px);
-    background-color: rgba(0, 0, 0, 0.553);
+    background-color: rgba(0, 0, 0, 0.79);
 }
 
 /* end of nav-bar */
 /* start of second section */
 .card-title {
     color: rgba(134, 131, 131, 1);
+    box-shadow:  rgba(134, 131, 131, 0.703);
 }
 
 
@@ -103,8 +108,10 @@ nav {
         justify-content: center;
     }
     
-.row>* {
+/* .row>* {
     width: auto !important;
+} */
 }
+.footer {
+     width : ; 
 }
-
