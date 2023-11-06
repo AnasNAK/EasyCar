@@ -1,26 +1,58 @@
+
+
+
+header nav{
+  backdrop-filter: blur(100px);
+  background-color: rgba(0, 0, 0, 0.553);
+}
+header .text_btn{
+  gap: 3vw;
+}
+
+header .link{
+  transition: 1s;
+  color: #fff;
+}
+header.link:hover{
+  color: rgb(132, 130, 130);
+}
+header .nav{
+  gap: 30PX;
+  display: flex;
+  justify-content: center;
+}
+header .user{
+  margin-left: 20PX;
+}
+
+/* ///////////////////////////////////////////////// */
 #blok img{
   width: 7vw;
 }
 #blok{
   cursor: pointer;
 }
-/* ///////////////////////// */
-.container {
+/* //////////////////section2//////////////////////////// */
+.sec1 .carousel-item img {
+  height: 50vw; 
+  width: 100%; 
+}
+.sec2 .container {
     padding-top: 8vw;
 }
-.row img{
+.sec2 .row img{
     box-shadow: 0px 9px 20px 0px black;
 }
-.row{
+.sec2 .row{
     padding-top: 8vw;
 }
-.container h1{
+.sec2 .container h1{
     font-size: 2.5vw;
 }
-p.txt{
+.sec2 p.txt{
     font-size: 1.6vw;
 }
-.button {
+.sec2 .button {
     display: inline-block;
     position: relative;
     left: 50%;
@@ -34,20 +66,21 @@ p.txt{
     width: 20vw;
     transition: all 0.5s;
     cursor: pointer;
+    margin-top: 3vw;
     
   }
-  .button:hover{
+  .sec2 .button:hover{
     background-color: red;
   }
 
-  .button span {
+  .sec2 .button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
 
-  .button span:after {
+  .sec2 .button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -55,39 +88,17 @@ p.txt{
     transition: 0.5s;
   }
 
-  .button:hover span {
+  .sec2 .button:hover span {
     padding-right: 25px;
   }
 
-  .button:hover span:after {
+  .sec2 .button:hover span:after {
     opacity: 1;
     right: 0;
   }
-  nav{
-    backdrop-filter: blur(100px);
-    background-color: rgba(0, 0, 0, 0.553);
-}
-  .text_btn{
-    gap: 3vw;
-  }
 
-  .link{
-    transition: 1s;
-    color: #fff;
-}
-.link:hover{
-    color: rgb(132, 130, 130);
-}
-.nav{
-    gap: 30PX;
-    display: flex;
-    justify-content: center;
-}
-.user{
-    margin-left: 20PX;
-}
 
-/* section3 */
+/* //////////////////////////////////section3 /////////////////////////////*/
 .sec3{
     margin-top: 10vw;
 }
@@ -105,7 +116,7 @@ p.txt{
     height: 100%;
 }
 
-svg{
+.sec3 svg{
     margin-left: 100px;
     width: 2.5VW;
     height: 2.5VW;
@@ -114,7 +125,8 @@ svg{
 .sec3 .nav-link{
   cursor: pointer;
 }
-/* section4 */
+
+/*/////////////////////////////////////// section4//////////////////////////////////// */
 
 .sec4 .container{
     display: flex;
@@ -165,7 +177,7 @@ svg{
   }
   
 
-  .img:hover .description {
+.sec4 .img:hover .description {
     opacity: 1;
   }
 
@@ -193,7 +205,7 @@ svg{
     margin-left: 8vw;
 
   }
-  .btn:hover{
+  .sec4 .btn:hover{
     background-color: red;
   }
 
@@ -245,14 +257,64 @@ svg{
     background-color: red;
 }   
 
-footer{
-
+/*///////////////////////////// section5 //////////////////////*/
+.sec5{
+  margin-top: 8vw;
+}
+.sec5 .row{
+  margin-top: 6vw;
+}
+.sec5 .button {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  bottom: -30%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 7px 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-top: 2vw;
+}
+.sec5 .button:hover{
+  background-color: red;
 }
 
+.sec5 .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
+.sec5 .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
 
+.sec5 .button:hover span {
+  padding-right: 25px;
+}
 
+.sec5 .button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
+.sec5 .txt{
+  font-size: 1.6vw;
+}
+
+/* /////////////////////footer////////////////////////// */
 
 
 /* media */
@@ -274,6 +336,10 @@ footer{
   .sec4 .description h3{
     font-size: 18px;
   }
+  .sec4 .pagination_ .link-btn{
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: 991px){
@@ -282,15 +348,53 @@ footer{
         justify-content: center;
         align-items: center;
     }
+    .sec1{
+      margin-top: 50PX;
+    }
+    .sec4 .btn {
+      margin-left: 100px;
+      margin-top: 30px;
+    }
+    .sec4 .row img{
+      margin-top: 20px;
+    }
+    .sec4 .description{
+      height: 230PX;
+    }
 }
 @media screen and (max-width: 720px){
-     p.txt{
-        font-size: 12px;
+     .sec5 .txt{
+        font-size: 10px;
     } 
-    .button{
+    .sec2 .container h1 {
+      font-size: 16px;
+    }
+    .sec2 p.txt {
+      font-size: 10px;
+    }
+    .sec5 h1{
+      font-size: 16px;
+    }
+      .sec5 .button{
+        margin-top: 30px;
+      }
+      .sec2 .button{
         width: 140px;
+        margin-top: 30px;
       }
       .sec4 .row{
         gap: 30PX;
       }
+      .sec4 .container{
+          gap: 20px;
+      } 
+      .sec4 .description{
+        width: 430PX;
+      }
+
+}
+@media screen and (max-width:579px) {
+  .sec4 .description{
+    width: 93%;
+  }
 }

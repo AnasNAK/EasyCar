@@ -417,6 +417,7 @@ const h3 = document.querySelectorAll('.description h3')
 function masquerBouton() {
   if (window.innerWidth < 1200) {
     list.style.display = 'none'; 
+    boutonblock.style.display = 'none';
     row1.style = 'initial';
     row2.style = 'initial';
     des.forEach(function(element) {
@@ -430,6 +431,7 @@ function masquerBouton() {
     })
   } else {
     list.style.display = 'block'; 
+    boutonblock.style.display = 'block';
   }
 }
 masquerBouton();
