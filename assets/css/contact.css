@@ -112,6 +112,10 @@ line-height: normal;
     opacity: 1;
     right: 0;
   }
+  .active-link{
+    color: rgb(127, 127, 127) !important;
+    font-weight: bold !important;
+  }
 @media only screen and (max-width: 1024px) {
     .header{
         width: fit-content;

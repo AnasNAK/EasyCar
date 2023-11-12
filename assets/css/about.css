@@ -37,6 +37,10 @@ nav {
     color: rgba(134, 131, 131, 1);
     box-shadow:  rgba(134, 131, 131, 0.703);
 }
+.active-link{
+    color: rgb(127, 127, 127) !important;
+    font-weight: bold !important;
+  }
 
 
 
@@ -108,10 +112,8 @@ nav {
         justify-content: center;
     }
     
-/* .row>* {
+.row>* {
     width: auto !important;
-} */
 }
-.footer {
-     width : ; 
 }
+

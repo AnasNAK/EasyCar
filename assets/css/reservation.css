@@ -24,6 +24,13 @@ header .nav{
 header .user{
   margin-left: 20PX;
 }
+.link:hover {
+  color: rgb(132, 130, 130);
+}
+.active-link{
+  color: rgb(127, 127, 127) !important;
+  font-weight: bold !important;
+}
 
 /* ///////////////////////////////////////////////// */
 #blok img{

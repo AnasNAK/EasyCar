@@ -50,7 +50,10 @@
 #img-box img:hover {
   transform: scale(1.1);
 }
-
+.active-link{
+    color: rgb(127, 127, 127) !important;
+    font-weight: bold !important;
+  }
 
 .card {
     
