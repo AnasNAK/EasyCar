@@ -405,3 +405,38 @@ header .user{
     width: 93%;
   }
 }
+
+
+/* css for cart  */
+
+#cart {
+  /* Your existing styles for the cart */
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  right: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  
+}
+
+.close-btn {
+  position: absolute;
+  top:0;
+  left: 10px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.close-btn:focus {
+  outline: none;
+}
+
+#cart.closed {
+  transform: translateX(100%);
+}

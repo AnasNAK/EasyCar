@@ -14,9 +14,9 @@ function generatePDF() {
     parsedCartItems.forEach(function (carData) {
         let cartItem = document.createElement("tr");
         cartItem.innerHTML = `
-            <td class="w-25 "><img src="${carData.image}" alt="${carData.name}" class=" w-50 m-auto"></td>
+            <td class="w-25"><img src="${carData.image}" alt="${carData.name}"  style="width:100%;height:9em;"></td>
             <td><p class="text-center fw-bold fs-5 ">${carData.name}</p></td>
-            <td><p>${carData.price}.00DH</p></td>
+            <td><p class="fw-bold" >Type: ${carData.type},  Toit:${carData.toit},<br>System:${carData.system},  Station:${carData.station}</p></td>
             <td><p class="text-center fw-bold fs-5 ">${carData.price}.00DH</p></td>
             
         `;

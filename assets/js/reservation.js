@@ -1,8 +1,6 @@
 
 
 
-
-
 // pagination
 
 const pagination1 = document.querySelector("#pagination1")
@@ -440,12 +438,57 @@ window.addEventListener('resize', masquerBouton);
 
 ////////////////////////////////////////////////////////////////local storage part ///////////////////////////////////////////////////////////
 
+function updateCartCount() {
+  const storedCartItems = localStorage.getItem('cartItems');
+  const parsedCartItems = JSON.parse(storedCartItems) || [];
+
+  const cartItemCountElementmb = document.getElementById('cartItemCountmobile');
+  const cartItemCountElement = document.getElementById('cartItemCount');
+
+  if (cartItemCountElementmb) {
+    cartItemCountElementmb.textContent = parsedCartItems.length.toString();
+  }
+  if (cartItemCountElement) {
+    cartItemCountElement.textContent = parsedCartItems.length.toString();
+  }
+}
+
 // Function to save the cart to localStorage
 function saveCartToLocalStorage(cartData) {
   // console.log("Saving to localStorage:", cartData);
   localStorage.setItem("cartItems", JSON.stringify(cartData));
+  updateCartCount();
   // console.log("Saved to localStorage:", JSON.stringify(cartData));
 }
+
+function updateCartDisplay(cartData) {
+  // Clear the existing content in the cartItems container
+  let cartItemsContainer = document.getElementById("cartItems");
+  cartItemsContainer.innerHTML = "";
+
+  // Create and append new cart items based on the updated cart data
+  cartData.forEach(function (carData, index) {
+    let cartItem = document.createElement("tr");
+    cartItem.innerHTML = `
+    <td><img src="${carData.image}" alt="${carData.name}" style="width:10em; height:6em;" class="cart-image"></td>
+    <td><p>${carData.name}</p></td>
+    <td><p>${carData.price}.00DH</p></td>
+    <td>
+    <td>
+    <a href="personalize.html?index=${index}&toit=${carData.toit}&system=${carData.system}&station=${carData.station}&image=${encodeURIComponent(carData.image)}" class="btn ms-5">Personalize</a>
+</td>
+</td>
+
+    <td><span class="remove-icon btn ms-1" onclick="removeFromCart(${index})">&#128465;</span></td>
+  `;
+
+    // Append the item to the cart
+    cartItemsContainer.appendChild(cartItem);
+
+  });
+  updateCartCount();
+}
+
 
 // Function to add the car data to the cart
 function addToCart(carData) {
@@ -462,7 +505,11 @@ function addToCart(carData) {
 
   // Update the cart display
   updateCartDisplay(existingCartData);
+  updateCartCount();
 }
+// Function to update the cart display
+
+
 
 // Function to remove the car data from the cart
 function removeFromCart(index) {
@@ -477,39 +524,20 @@ function removeFromCart(index) {
 
   // Update the cart display
   updateCartDisplay(existingCartData);
+  updateCartCount();
 }
-
-// Function to update the cart display
-function updateCartDisplay(cartData) {
-  // Clear the existing content in the cartItems container
-  let cartItemsContainer = document.getElementById("cartItems");
-  cartItemsContainer.innerHTML = "";
-
-  // Create and append new cart items based on the updated cart data
-  cartData.forEach(function (carData, index) {
-    let cartItem = document.createElement("tr");
-    cartItem.innerHTML = `
-    <td><img src="${carData.image}" alt="${carData.name}" class="cart-image w-100"></td>
-    <td><p>${carData.name}</p></td>
-    <td><p>${carData.price}.00DH</p></td>
-    <td><a href="../personalize.html" class="btn">Personalize</a></td>
-    <td><span class="remove-icon btn" onclick="removeFromCart(${index})">&#128465;</span></td>
-    `;
-
-    // Append the item to the cart
-    cartItemsContainer.appendChild(cartItem);
-  });
-}
-
 
 // Load the cart from localStorage on DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function () {
+
+
   let storedCartItems = localStorage.getItem("cartItems");
   let parsedCartItems = JSON.parse(storedCartItems) || [];
 
   // Update the cart display with the loaded items
   updateCartDisplay(parsedCartItems);
   // console.log("Loaded from localStorage:", parsedCartItems);
+
 });
 
 // Attach a click event listener to the container
@@ -551,34 +579,93 @@ document.getElementById('container').addEventListener('click', function (event) 
     let carData = {
       name: descriptionElement.querySelector('h3') ? descriptionElement.querySelector('h3').textContent.trim() : '',
       price: extractPrice(descriptionElement),
+      type: extractType(descriptionElement),
+      toit: extractToit(descriptionElement),
+      system: extractSystem(descriptionElement),
+      station: extractStation(descriptionElement),
       image: carElement.querySelector('img').src,
 
     };
 
 
-    // Function to extract the price from the description element
+    function extractInfo(descriptionElement, index, defaultValue) {
+      const span = descriptionElement.querySelector(`p span:nth-child(${index})`);
+      const node = span?.nextSibling;
+      return node && node.nodeType === 3 ? node.textContent.trim() : defaultValue;
+    }
+    
     function extractPrice(descriptionElement) {
-      // Get the fifth child span (index 4)
-      let priceSpan = descriptionElement.querySelector('p span:nth-child(9)');
-
-      // If the span is found, get the next sibling text node
-      if (priceSpan) {
-        let priceNode = priceSpan.nextSibling;
-
-        // If the text node is found, return its content
-        if (priceNode && priceNode.nodeType === 3) {
-          return priceNode.textContent.trim();
-        }
-      }
-
-      // If the span or text node is not found, return a default value
-      return 'Price not available';
+      return extractInfo(descriptionElement, 9, 'Price not available');
+    }
+    
+    function extractType(descriptionElement) {
+      return extractInfo(descriptionElement, 1, 'Type not available');
+    }
+    
+    function extractToit(descriptionElement) {
+      return extractInfo(descriptionElement, 3, 'Toit not available');
+    }
+    
+    function extractSystem(descriptionElement) {
+      return extractInfo(descriptionElement, 5, 'System not available');
+    }
+    
+    function extractStation(descriptionElement) {
+      return extractInfo(descriptionElement, 7, 'Station not available');
     }
 
     // Log the extracted data to verify
     // console.log('Car Data:', carData);
 
     // Add the car data to the cart
+
+
+
     addToCart(carData);
+
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const cart = document.getElementById('cart');
+  const closeBtn = document.getElementById('closeCartBtn');
+  const openCartBtn = document.getElementById('openCartBtn');
+  const openCartBtnMobile = document.getElementById('openCartBtnMobile');
+
+  // Function to check if the cart is empty and update button visibility
+  function updateCartVisibility() {
+    const isCartEmpty = JSON.parse(localStorage.getItem('cartItems') || '[]').length === 0;
+    openCartBtn.style.display = openCartBtnMobile.style.display = isCartEmpty ? 'none' : 'block';
+  }
+
+  // Initial setup
+  cart.classList.add('closed');
+  updateCartVisibility();
+
+  // Event listener for close button
+  closeBtn.addEventListener('click', () => cart.classList.add('closed'));
+
+  // Event listener for opening the cart
+  [openCartBtn, openCartBtnMobile].forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+      if (cartItems.length > 0) cart.classList.remove('closed');
+    });
+  });
+});
+
+
+document.getElementById('confirmButton').addEventListener('click', function () {
+  // Show the confirmation dialog
+  const isConfirmed = confirm('Do you want to confirm your order?');
+
+  if (isConfirmed) {
+      // Clear the local storage
+      localStorage.removeItem('cartItems');
+
+      // Reload the page
+      location.reload();
+  }
+});
+
+
